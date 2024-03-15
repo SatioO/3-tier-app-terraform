@@ -2,7 +2,8 @@
 **/.terraform
 .DS_Store
 **/.DS_Store
-terraform.tfvars
-terraform.tfstate
-terraform.tfstate.backup
+**/terraform.tfvars
+**/terraform.tfstate
+**/terraform.tfstate.backup
+**/.terragrunt-cache
 .terraform.tfstate.lock.info
