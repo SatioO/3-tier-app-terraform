@@ -1,12 +1,15 @@
 remote_state {
-    backend = "local"
+    backend = "s3"
     generate = {
-        path = "backend.tf"
+        path = "state.tf"
         if_exists = "overwrite_terragrunt"
     }
 
     config = {
-        path = "${path_relative_to_include()}/terraform.tfstate"
+        bucket = "accion-terraform-state"
+        key= "${path_relative_to_include()}/terraform.tfstate"
+        region = "ap-south-1"
+        encrypt = true
     }
 }
 

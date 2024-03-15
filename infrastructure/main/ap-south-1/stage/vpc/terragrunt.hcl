@@ -6,15 +6,6 @@ include {
     path = find_in_parent_folders()
 }
 
-inputs = {
-    environment        = "accion-staging"
-    vpc_cidr           = "10.0.0.0/16"
-    web_subnets_cidr   = ["10.0.10.0/24"]
-    app_subnets_cidr   = ["10.0.20.0/24"]
-    db_subnets_cidr    = ["10.0.0.0/24"]
-    availability_zones = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
-}
-
 include "env" {
     path = find_in_parent_folders("env.hcl")
     expose = true
